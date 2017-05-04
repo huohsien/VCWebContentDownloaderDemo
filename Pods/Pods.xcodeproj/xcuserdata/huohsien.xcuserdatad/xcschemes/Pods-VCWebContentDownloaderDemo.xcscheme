@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "666669DB1EBAE87B00EE444E"
-               BuildableName = "VCWebContentDownloaderDemo.app"
-               BlueprintName = "VCWebContentDownloaderDemo"
-               ReferencedContainer = "container:VCWebContentDownloaderDemo.xcodeproj">
+               BlueprintIdentifier = "7040A06B53B7678B9CC628262789BA4C"
+               BuildableName = "Pods_VCWebContentDownloaderDemo.framework"
+               BlueprintName = "Pods-VCWebContentDownloaderDemo"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,23 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "666669DB1EBAE87B00EE444E"
-            BuildableName = "VCWebContentDownloaderDemo.app"
-            BlueprintName = "VCWebContentDownloaderDemo"
-            ReferencedContainer = "container:VCWebContentDownloaderDemo.xcodeproj">
+            BlueprintIdentifier = "7040A06B53B7678B9CC628262789BA4C"
+            BuildableName = "Pods_VCWebContentDownloaderDemo.framework"
+            BlueprintName = "Pods-VCWebContentDownloaderDemo"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OS_ACTIVITY_MODE"
-            value = "disable"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -68,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "666669DB1EBAE87B00EE444E"
-            BuildableName = "VCWebContentDownloaderDemo.app"
-            BlueprintName = "VCWebContentDownloaderDemo"
-            ReferencedContainer = "container:VCWebContentDownloaderDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

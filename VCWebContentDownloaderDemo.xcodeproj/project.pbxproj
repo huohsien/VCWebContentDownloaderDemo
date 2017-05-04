@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		666669E01EBAE87B00EE444E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666669DF1EBAE87B00EE444E /* AppDelegate.swift */; };
-		666669E21EBAE87B00EE444E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666669E11EBAE87B00EE444E /* ViewController.swift */; };
 		666669E51EBAE87B00EE444E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666669E31EBAE87B00EE444E /* Main.storyboard */; };
 		666669E71EBAE87B00EE444E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666669E61EBAE87B00EE444E /* Assets.xcassets */; };
 		666669EA1EBAE87B00EE444E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666669E81EBAE87B00EE444E /* LaunchScreen.storyboard */; };
+		66666A071EBB335200EE444E /* VCSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66666A061EBB335200EE444E /* VCSearchViewController.swift */; };
+		F50CD9774FB4FB680CC991C3 /* Pods_VCWebContentDownloaderDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB6035094B35D3616B8D2BA /* Pods_VCWebContentDownloaderDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FB6035094B35D3616B8D2BA /* Pods_VCWebContentDownloaderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCWebContentDownloaderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		666669DC1EBAE87B00EE444E /* VCWebContentDownloaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCWebContentDownloaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666669DF1EBAE87B00EE444E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		666669E11EBAE87B00EE444E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		666669E41EBAE87B00EE444E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		666669E61EBAE87B00EE444E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		666669E91EBAE87B00EE444E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		666669EB1EBAE87B00EE444E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66666A061EBB335200EE444E /* VCSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSearchViewController.swift; sourceTree = "<group>"; };
+		B2EDC32703C7292740CD52A0 /* Pods-VCWebContentDownloaderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCWebContentDownloaderDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCWebContentDownloaderDemo/Pods-VCWebContentDownloaderDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BF95E5CBA9C8317A64A3D3E9 /* Pods-VCWebContentDownloaderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCWebContentDownloaderDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCWebContentDownloaderDemo/Pods-VCWebContentDownloaderDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50CD9774FB4FB680CC991C3 /* Pods_VCWebContentDownloaderDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40F1E3A6689F98388E3D7F45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2EDC32703C7292740CD52A0 /* Pods-VCWebContentDownloaderDemo.debug.xcconfig */,
+				BF95E5CBA9C8317A64A3D3E9 /* Pods-VCWebContentDownloaderDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		666669D31EBAE87B00EE444E = {
 			isa = PBXGroup;
 			children = (
 				666669DE1EBAE87B00EE444E /* VCWebContentDownloaderDemo */,
 				666669DD1EBAE87B00EE444E /* Products */,
+				40F1E3A6689F98388E3D7F45 /* Pods */,
+				E3A7596AA90185DDA4F2222B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +71,37 @@
 			isa = PBXGroup;
 			children = (
 				666669DF1EBAE87B00EE444E /* AppDelegate.swift */,
-				666669E11EBAE87B00EE444E /* ViewController.swift */,
+				66666A081EBB335500EE444E /* controllers */,
 				666669E31EBAE87B00EE444E /* Main.storyboard */,
 				666669E61EBAE87B00EE444E /* Assets.xcassets */,
+				66666A091EBB349600EE444E /* support files */,
+			);
+			path = VCWebContentDownloaderDemo;
+			sourceTree = "<group>";
+		};
+		66666A081EBB335500EE444E /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66666A061EBB335200EE444E /* VCSearchViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		66666A091EBB349600EE444E /* support files */ = {
+			isa = PBXGroup;
+			children = (
 				666669E81EBAE87B00EE444E /* LaunchScreen.storyboard */,
 				666669EB1EBAE87B00EE444E /* Info.plist */,
 			);
-			path = VCWebContentDownloaderDemo;
+			name = "support files";
+			sourceTree = "<group>";
+		};
+		E3A7596AA90185DDA4F2222B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FB6035094B35D3616B8D2BA /* Pods_VCWebContentDownloaderDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 666669EE1EBAE87B00EE444E /* Build configuration list for PBXNativeTarget "VCWebContentDownloaderDemo" */;
 			buildPhases = (
+				7BEA9BAC4503946A92FDEA37 /* [CP] Check Pods Manifest.lock */,
 				666669D81EBAE87B00EE444E /* Sources */,
 				666669D91EBAE87B00EE444E /* Frameworks */,
 				666669DA1EBAE87B00EE444E /* Resources */,
+				FE48A6F385BC8F7E3F6EEF2C /* [CP] Embed Pods Frameworks */,
+				81B4777A713091EED31BA628 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +175,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7BEA9BAC4503946A92FDEA37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		81B4777A713091EED31BA628 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCWebContentDownloaderDemo/Pods-VCWebContentDownloaderDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE48A6F385BC8F7E3F6EEF2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VCWebContentDownloaderDemo/Pods-VCWebContentDownloaderDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		666669D81EBAE87B00EE444E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				666669E21EBAE87B00EE444E /* ViewController.swift in Sources */,
 				666669E01EBAE87B00EE444E /* AppDelegate.swift in Sources */,
+				66666A071EBB335200EE444E /* VCSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +350,7 @@
 		};
 		666669EF1EBAE87B00EE444E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2EDC32703C7292740CD52A0 /* Pods-VCWebContentDownloaderDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZWQWGRSN4T;
@@ -272,6 +364,7 @@
 		};
 		666669F01EBAE87B00EE444E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF95E5CBA9C8317A64A3D3E9 /* Pods-VCWebContentDownloaderDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZWQWGRSN4T;
@@ -302,6 +395,7 @@
 				666669F01EBAE87B00EE444E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
