@@ -46,7 +46,12 @@ extension DDLogFlag {
     }
 }
 
-public var defaultDebugLevel = DDLogLevel.verbose
+#if DEBUG
+    public var defaultDebugLevel = DDLogLevel.all
+#else
+    public var defaultDebugLevel = DDLogLevel.warning
+#endif
+
 
 public func resetDefaultDebugLevel() {
     defaultDebugLevel = DDLogLevel.verbose

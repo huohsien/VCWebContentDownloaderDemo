@@ -9,19 +9,13 @@
 import UIKit
 import CocoaLumberjack
 
-#if DEBUG
-    var ddLogLevel : DDLogLevel = DDLogLevel.verbose
-#else
-    var ddLogLevel : DDLogLevel = DDLogLevel.warning
-#endif
-
 class VCSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.isNavigationBarHidden = true;
-        
+                
         DDLogVerbose("verbose");
         DDLogWarn("warn");
 
