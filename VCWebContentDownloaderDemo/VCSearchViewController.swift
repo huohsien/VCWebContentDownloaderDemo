@@ -11,30 +11,29 @@ import CocoaLumberjack
 
 class VCSearchViewController: UIViewController {
 
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    var downloadManager : VCWebNovelDownloadManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.isNavigationBarHidden = true;
-                
-        DDLogVerbose("verbose");
-        DDLogWarn("warn");
+        
+        downloadManager = VCWebNovelDownloadManager()
+        
+    }
+    
+    @IBAction func okButtonPressed(_ sender: Any) {
+        
+        downloadManager.bookName = searchTextField.text
+        downloadManager.load()
 
     }
     
-    
-    override open var shouldAutorotate: Bool {
-        return false
+    @IBAction func touchedOutside(_ sender: Any) {
+        self.searchTextField.resignFirstResponder()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

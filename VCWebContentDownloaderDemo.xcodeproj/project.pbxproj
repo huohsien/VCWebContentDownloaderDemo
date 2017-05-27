@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66102D3D1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66102D3C1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift */; };
+		66102D411ED7DE6C00F5F0F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66102D401ED7DE6C00F5F0F3 /* Constants.swift */; };
 		666669E01EBAE87B00EE444E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666669DF1EBAE87B00EE444E /* AppDelegate.swift */; };
 		666669E51EBAE87B00EE444E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666669E31EBAE87B00EE444E /* Main.storyboard */; };
 		666669E71EBAE87B00EE444E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666669E61EBAE87B00EE444E /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		4FB6035094B35D3616B8D2BA /* Pods_VCWebContentDownloaderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCWebContentDownloaderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66102D3C1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWebNovelDownloadManager.swift; sourceTree = "<group>"; };
+		66102D401ED7DE6C00F5F0F3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		666669DC1EBAE87B00EE444E /* VCWebContentDownloaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCWebContentDownloaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666669DF1EBAE87B00EE444E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		666669E41EBAE87B00EE444E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		66102D3B1ED6A7D200F5F0F3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				66102D3C1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		666669D31EBAE87B00EE444E = {
 			isa = PBXGroup;
 			children = (
@@ -70,11 +82,13 @@
 		666669DE1EBAE87B00EE444E /* VCWebContentDownloaderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				66102D3B1ED6A7D200F5F0F3 /* model */,
 				666669DF1EBAE87B00EE444E /* AppDelegate.swift */,
 				66666A081EBB335500EE444E /* controllers */,
 				666669E31EBAE87B00EE444E /* Main.storyboard */,
 				666669E61EBAE87B00EE444E /* Assets.xcassets */,
 				66666A091EBB349600EE444E /* support files */,
+				66102D401ED7DE6C00F5F0F3 /* Constants.swift */,
 			);
 			path = VCWebContentDownloaderDemo;
 			sourceTree = "<group>";
@@ -231,6 +245,8 @@
 			files = (
 				666669E01EBAE87B00EE444E /* AppDelegate.swift in Sources */,
 				66666A071EBB335200EE444E /* VCSearchViewController.swift in Sources */,
+				66102D3D1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift in Sources */,
+				66102D411ED7DE6C00F5F0F3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +376,7 @@
 				DEVELOPMENT_TEAM = ZWQWGRSN4T;
 				INFOPLIST_FILE = VCWebContentDownloaderDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VHHC.VCWebContentDownloaderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -377,6 +394,7 @@
 				DEVELOPMENT_TEAM = ZWQWGRSN4T;
 				INFOPLIST_FILE = VCWebContentDownloaderDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VHHC.VCWebContentDownloaderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kanna.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-VCWebContentDownloaderDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>27FE60EBC12DB65EAA02FEB441EA973D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>416B388906DEFAC81F0676F277AC9058</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7040A06B53B7678B9CC628262789BA4C</key>
+		<key>4D10E4FF5A483B852B47CCA0B994E340</key>
 		<dict>
 			<key>primary</key>
 			<true/>

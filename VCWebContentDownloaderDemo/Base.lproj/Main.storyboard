@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LzM-Yu-DjL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LzM-Yu-DjL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,22 +22,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi there!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSg-gj-Krl">
-                                <rect key="frame" x="152" y="88" width="71" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="医仙" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-q4-jGh">
+                                <rect key="frame" x="16" y="28" width="296" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="9GC-S8-PLf"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqV-QG-mUF">
+                                <rect key="frame" x="320" y="28" width="39" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="BXk-rb-nrc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="搜尋"/>
+                                <connections>
+                                    <action selector="okButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whg-HW-b2V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Wl3-q4-jGh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="LpO-Qy-iPw"/>
+                            <constraint firstItem="Wl3-q4-jGh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="swc-8U-Ofm"/>
+                            <constraint firstItem="lqV-QG-mUF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="tQl-k1-ZLI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lqV-QG-mUF" secondAttribute="trailing" id="wR8-Rx-yNR"/>
+                            <constraint firstItem="lqV-QG-mUF" firstAttribute="height" secondItem="Wl3-q4-jGh" secondAttribute="height" id="yds-Lx-l2r"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xa1-PH-B7S" appends="YES" id="DBb-9U-Qns"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="C0p-aG-iev"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="Wl3-q4-jGh" id="Ccy-24-8gm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xa1-PH-B7S">
+                    <connections>
+                        <action selector="touchedOutside:" destination="BYZ-38-t0r" id="r2f-0l-kZ7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1321" y="-1155"/>
+            <point key="canvasLocation" x="-2124.5" y="-1155.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="okI-dw-hOD">
@@ -54,7 +87,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU1-Q9-ZBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2273" y="-1155"/>
+            <point key="canvasLocation" x="-2863" y="-1155"/>
         </scene>
     </scenes>
 </document>
