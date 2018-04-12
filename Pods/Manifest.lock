@@ -1,22 +1,14 @@
 PODS:
-  - CocoaLumberjack (3.0.0):
-    - CocoaLumberjack/Default (= 3.0.0)
-    - CocoaLumberjack/Extensions (= 3.0.0)
-  - CocoaLumberjack/Core (3.0.0)
-  - CocoaLumberjack/Default (3.0.0):
-    - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (3.0.0):
+  - CocoaLumberjack/Default (3.4.1)
+  - CocoaLumberjack/Swift (3.4.1):
     - CocoaLumberjack/Default
-  - Kanna (4.0.0)
 
 DEPENDENCIES:
-  - CocoaLumberjack (~> 3.0.0)
-  - Kanna
+  - CocoaLumberjack/Swift
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
-  Kanna: d5ae2a26472f7e7a474e7f36a9cd8aa2c8c63ad3
+  CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
 
-PODFILE CHECKSUM: 3a828fcb9f6a4d2239ee2f4e6c0bb2f17f8705a3
+PODFILE CHECKSUM: 46014c0b80594684374d6856263b8a31aeb07552
 
 COCOAPODS: 1.2.1

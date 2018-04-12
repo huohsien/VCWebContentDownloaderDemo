@@ -8,7 +8,6 @@
 
 import UIKit
 import CocoaLumberjack
-import Kanna
 
 class VCSearchViewController: UIViewController {
 

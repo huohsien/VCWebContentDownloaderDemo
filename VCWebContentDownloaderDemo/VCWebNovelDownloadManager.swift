@@ -9,7 +9,6 @@
 import UIKit
 import WebKit
 import CocoaLumberjack
-import Kanna
 
 enum VCWebNovelDownloadManagerStatus {
     case load
