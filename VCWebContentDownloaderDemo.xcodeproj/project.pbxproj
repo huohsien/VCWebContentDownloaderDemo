@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		66102D3D1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66102D3C1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift */; };
 		66102D411ED7DE6C00F5F0F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66102D401ED7DE6C00F5F0F3 /* Constants.swift */; };
+		66102D461EDCC70B00F5F0F3 /* VCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66102D451EDCC70B00F5F0F3 /* VCHelper.swift */; };
 		666669E01EBAE87B00EE444E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666669DF1EBAE87B00EE444E /* AppDelegate.swift */; };
 		666669E51EBAE87B00EE444E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666669E31EBAE87B00EE444E /* Main.storyboard */; };
 		666669E71EBAE87B00EE444E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666669E61EBAE87B00EE444E /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		4FB6035094B35D3616B8D2BA /* Pods_VCWebContentDownloaderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VCWebContentDownloaderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66102D3C1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWebNovelDownloadManager.swift; sourceTree = "<group>"; };
 		66102D401ED7DE6C00F5F0F3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		66102D451EDCC70B00F5F0F3 /* VCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCHelper.swift; sourceTree = "<group>"; };
 		666669DC1EBAE87B00EE444E /* VCWebContentDownloaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCWebContentDownloaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666669DF1EBAE87B00EE444E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		666669E41EBAE87B00EE444E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		66102D441EDCC6E500F5F0F3 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				66102D451EDCC70B00F5F0F3 /* VCHelper.swift */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
 		666669D31EBAE87B00EE444E = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		666669DE1EBAE87B00EE444E /* VCWebContentDownloaderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				66102D441EDCC6E500F5F0F3 /* tools */,
 				66102D3B1ED6A7D200F5F0F3 /* model */,
 				666669DF1EBAE87B00EE444E /* AppDelegate.swift */,
 				66666A081EBB335500EE444E /* controllers */,
@@ -244,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				666669E01EBAE87B00EE444E /* AppDelegate.swift in Sources */,
+				66102D461EDCC70B00F5F0F3 /* VCHelper.swift in Sources */,
 				66666A071EBB335200EE444E /* VCSearchViewController.swift in Sources */,
 				66102D3D1ED6A81400F5F0F3 /* VCWebNovelDownloadManager.swift in Sources */,
 				66102D411ED7DE6C00F5F0F3 /* Constants.swift in Sources */,

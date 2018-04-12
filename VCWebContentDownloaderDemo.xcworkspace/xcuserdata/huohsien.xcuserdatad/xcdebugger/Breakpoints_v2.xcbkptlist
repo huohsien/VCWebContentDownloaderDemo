@@ -13,5 +13,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VCWebContentDownloaderDemo/VCWebNovelDownloadManager.swift"
+            timestampString = "522832970.761787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "webView(_:didFail:withError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VCWebContentDownloaderDemo.VCWebNovelDownloadManager.webView(__ObjC.WKWebView, didFail: Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.WKNavigation&gt;, withError: Swift.Error) -&gt; ()"
+                  moduleName = "VCWebContentDownloaderDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huohsien/Developer/VCWebContentDownloaderDemo/VCWebContentDownloaderDemo/VCWebNovelDownloadManager.swift"
+                  timestampString = "537016323.57522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () -&gt; Swift.String in VCWebContentDownloaderDemo.VCWebNovelDownloadManager.webView(__ObjC.WKWebView, didFail: Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.WKNavigation&gt;, withError: Swift.Error) -&gt; ()"
+                  moduleName = "VCWebContentDownloaderDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huohsien/Developer/VCWebContentDownloaderDemo/VCWebContentDownloaderDemo/VCWebNovelDownloadManager.swift"
+                  timestampString = "537016323.576818"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

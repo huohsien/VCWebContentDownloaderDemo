@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="医仙" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-q4-jGh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="江山美色" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-q4-jGh">
                                 <rect key="frame" x="16" y="28" width="296" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="9GC-S8-PLf"/>
@@ -59,6 +59,7 @@
                     <navigationItem key="navigationItem" id="C0p-aG-iev"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="searchButton" destination="lqV-QG-mUF" id="qw2-G4-ldj"/>
                         <outlet property="searchTextField" destination="Wl3-q4-jGh" id="Ccy-24-8gm"/>
                     </connections>
                 </viewController>

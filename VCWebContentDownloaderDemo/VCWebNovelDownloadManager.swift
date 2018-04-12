@@ -19,7 +19,7 @@ enum VCWebNovelDownloadManagerStatus {
 
 class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate {
     
-    fileprivate var wkWebView : WKWebView!
+    var wkWebView : WKWebView!
     fileprivate var status : VCWebNovelDownloadManagerStatus!
     fileprivate var htmlContent : String?
     var bookName : String!
@@ -41,8 +41,6 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate {
         DDLogVerbose("VCWDM:l - load url = \(url)")
         wkWebView.load(URLRequest(url: url))
         
-        
-
     }
     
 // MARK: - WKNavigationDelegates
@@ -51,33 +49,29 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate {
 
         if status == .load {
             DDLogVerbose("VCWDM:wdn - evaluate javascript to search book")
-            webView.evaluateJavaScript("document.getElementById('Keyword').value = '" + bookName + "'; var passFields = document.querySelectorAll(\"input[type='submit']\"); passFields[0].click()") { (result : Any?, error : Error?) in
+            webView.evaluateJavaScript("document.getElementById('Keyword').value = '" + bookName + "'; var passFields = document.querySelectorAll(\"input[type='submit']\"); passFields[1].click()") { (result : Any?, error : Error?) in
+
                 if error != nil {
                     DDLogError("VCWDM:wdn - error message: \(error.debugDescription)")
                 } else {
                     self.status = .selectBook
-                    webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (result : Any?, error : Error?) in
-                        if error != nil {
-                            DDLogError("VCWDM:wdn - error message: \(error.debugDescription)")
-                        } else {
-
-                            self.htmlContent = result as! String
-                            
-                        }
-                    }
                 }
-                
             }
         } else if status == .selectBook {
             
-            DDLogVerbose("VCWDM:wdn - parsing html to look for the book in search")
-
-            if let doc = Kanna.HTML(html: htmlContent!, encoding: String.Encoding.utf8) {
-                
-                for node in doc.xpath("/html/body/div[0]/div[1]") {
-                    print(node.text)
+            webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (result : Any?, error : Error?) in
+                if error != nil {
+                    DDLogError("VCWDM:wdn - error message: \(error.debugDescription)")
+                } else {
+                    if result != nil {
+                        self.htmlContent = (result as! String)
+                        // write to file
+                        VCHelper.writeTo(file: self.bookName + ".txt", text: self.htmlContent)
+                    } else {
+                        DDLogError("VCWDM:wdn - nothing returned from the web server")
+                    }
+                    
                 }
-                
             }
         }
         
@@ -87,4 +81,12 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate {
         DDLogError("VCWDM:wdfnwe - error")
     }
     
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    
+//        if let urlStr = navigationAction.request.url?.absoluteString {
+//            DDLogVerbose("VCWDM:wdnd - url = \(urlStr)")
+//        }
+        decisionHandler(.allow)
+    }
+
 }
