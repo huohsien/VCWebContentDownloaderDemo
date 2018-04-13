@@ -8,6 +8,7 @@
 
 import UIKit
 import CocoaLumberjack
+import Kanna
 
 class VCSearchViewController: UIViewController {
 
@@ -36,16 +37,18 @@ class VCSearchViewController: UIViewController {
         self.view.addSubview(downloadManager.wkWebView)
 //        print(downloadManager.wkWebView.frame)
         
-        DDLogVerbose("VCSVC:obp - parsing html to look for the book in search")
+        DDLogVerbose("VCSVC:vwaa - parsing html to look for the book in search")
         if let htmlContent = VCHelper.readTextFrom(file: self.searchTextField.text! + ".txt") {
-            if let doc = Kanna.HTML(html: htmlContent, encoding: String.Encoding.utf8) {
+            do {
+                let doc = try Kanna.HTML(html: htmlContent, encoding: .utf8)
                 
                 for node in doc.xpath("//div[@class='result-item result-game-item']/div/@onclick") {
                     print("---------------------------")
                     print((node.text)!)
                     
                 }
-                
+            } catch _ {
+                DDLogWarn("VCSVC:vwaa - failed to create html document for Kanna")
             }
  
         }

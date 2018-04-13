@@ -28,7 +28,7 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate {
     
         status = .load
             
-        DDLogVerbose("VCWDM:l - create web view")
+        DDLogVerbose("VCWDM:i - create web view")
         wkWebView = WKWebView(frame:.zero)
         wkWebView.navigationDelegate = self
         

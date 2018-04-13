@@ -4,4 +4,5 @@ target 'VCWebContentDownloaderDemo' do
   use_frameworks!
   
   pod 'CocoaLumberjack/Swift'
+  pod 'Kanna'
 end

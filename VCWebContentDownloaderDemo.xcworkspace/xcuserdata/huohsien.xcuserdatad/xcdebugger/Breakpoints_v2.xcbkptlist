@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VCWebContentDownloaderDemo/VCWebNovelDownloadManager.swift"
-            timestampString = "522832970.761787"
+            timestampString = "545278761.968272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "webView(_:didFail:withError:)"
             landmarkType = "7">
             <Locations>
@@ -36,11 +36,11 @@
                   moduleName = "VCWebContentDownloaderDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huohsien/Developer/VCWebContentDownloaderDemo/VCWebContentDownloaderDemo/VCWebNovelDownloadManager.swift"
-                  timestampString = "537016323.57522"
+                  timestampString = "545278764.736658"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
@@ -51,11 +51,75 @@
                   moduleName = "VCWebContentDownloaderDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huohsien/Developer/VCWebContentDownloaderDemo/VCWebContentDownloaderDemo/VCWebNovelDownloadManager.swift"
-                  timestampString = "537016323.576818"
+                  timestampString = "545278764.738223"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VCWebContentDownloaderDemo/VCSearchViewController.swift"
+            timestampString = "545278761.968341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VCWebContentDownloaderDemo/VCSearchViewController.swift"
+            timestampString = "545278761.968642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VCWebContentDownloaderDemo.VCSearchViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "VCWebContentDownloaderDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huohsien/Developer/VCWebContentDownloaderDemo/VCWebContentDownloaderDemo/VCSearchViewController.swift"
+                  timestampString = "545278764.745793"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "4300">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in VCWebContentDownloaderDemo.VCSearchViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "VCWebContentDownloaderDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huohsien/Developer/VCWebContentDownloaderDemo/VCWebContentDownloaderDemo/VCSearchViewController.swift"
+                  timestampString = "545278764.747246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
                   offsetFromSymbolStart = "8">
                </Location>
             </Locations>
