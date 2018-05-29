@@ -46,9 +46,13 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
+        let urlString = webView.url?.absoluteString
+        print("urlString = \(urlString!)")
+        
         if status == .load {
             DDLogVerbose("VCWDM:wdn - evaluate javascript to search book")
-            webView.evaluateJavaScript("document.getElementById('Keyword').value = '" + bookName + "'; var passFields = document.querySelectorAll(\"input[type='submit']\"); passFields[1].click()") { (result : Any?, error : Error?) in
+            webView.evaluateJavaScript("document.getElementById('s_key').value = '" + bookName + "'; var passFields = document.querySelectorAll(\"input[type='submit']\"); passFields[1].click()") { (result : Any?, error : Error?) in
+
 
                 if error != nil {
                     DDLogError("VCWDM:wdn - error message: \(error.debugDescription)")
