@@ -25,7 +25,7 @@ class VCHelper: NSObject {
                 text = try String(contentsOf: path, encoding: String.Encoding.utf8)
             }
             catch {
-                DDLogError("VCH:rtff - error occured while reading text from the file")
+                DDLogError("error occured while reading text from the file")
                 return nil
             }
         }
@@ -47,7 +47,7 @@ class VCHelper: NSObject {
                 try text?.write(to: path, atomically: false, encoding: String.Encoding.utf8)
             }
             catch {
-                DDLogError("VCH:wtft - error occured while writing text to the file")
+                DDLogError("error occured while writing text to the file")
             }
             
         }

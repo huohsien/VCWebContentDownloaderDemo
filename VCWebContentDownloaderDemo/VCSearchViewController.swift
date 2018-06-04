@@ -37,7 +37,7 @@ class VCSearchViewController: UIViewController {
         self.view.addSubview(downloadManager.wkWebView)
 //        print(downloadManager.wkWebView.frame)
         
-        DDLogVerbose("VCSVC:vwaa - parsing html to look for the book in search")
+        DDLogVerbose("parsing html to look for the book in search")
         if let htmlContent = VCHelper.readTextFrom(file: self.searchTextField.text! + ".txt") {
             do {
                 let doc = try Kanna.HTML(html: htmlContent, encoding: .utf8)

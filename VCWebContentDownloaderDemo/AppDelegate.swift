@@ -7,7 +7,25 @@
 //
 
 import UIKit
-  import CocoaLumberjack
+import CocoaLumberjack
+
+import CocoaLumberjack.DDLog
+
+class LogFormatter: NSObject, DDLogFormatter {
+    let dateFormatter: DateFormatter
+    
+    override init() {
+        dateFormatter = DateFormatter()
+        dateFormatter.formatterBehavior = .behavior10_4
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
+        
+        super.init()
+    }
+    func format(message logMessage: DDLogMessage) -> String? {
+        let dateAndTime = dateFormatter.string(from: logMessage.timestamp)
+        return "\(dateAndTime) [\(logMessage.fileName)-> \(logMessage.function!) @\(logMessage.line)]: \(logMessage.message)"
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        DDTTYLogger.sharedInstance.logFormatter = LogFormatter()
+        DDASLLogger.sharedInstance.logFormatter = LogFormatter()
 
         DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
         DDLog.add(DDASLLogger.sharedInstance) // ASL = Apple System Logs
