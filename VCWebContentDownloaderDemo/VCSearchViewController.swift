@@ -35,7 +35,6 @@ class VCSearchViewController: UIViewController {
         let frame = CGRect(x: searchTextFieldFrame.origin.x , y:searchTextFieldFrame.origin.y + searchTextFieldFrame.size.height + 20 , width: searchButtonFrame.origin.x + searchButtonFrame.size.width - searchTextFieldFrame.origin.x, height: self.view.frame.size.height - searchTextFieldFrame.size.height - searchButtonFrame.size.height - 40)
         downloadManager.wkWebView.frame = frame
         self.view.addSubview(downloadManager.wkWebView)
-//        print(downloadManager.wkWebView.frame)
         
         DDLogVerbose("parsing html to look for the book in search")
         if let htmlContent = VCHelper.readTextFrom(file: self.searchTextField.text! + ".txt") {

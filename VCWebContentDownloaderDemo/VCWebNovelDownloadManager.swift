@@ -64,8 +64,10 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate, WKScriptMessage
                 } else {
                     if result != nil {
                         self.htmlContent = (result as! String)
-                        // write to file
-                        VCHelper.writeTo(file: self.bookName + ".txt", text: self.htmlContent)
+                        // write current html to file
+                        VCHelper.writeTo(file: self.bookName + ".html", text: self.htmlContent)
+                        DDLogVerbose("write file \(self.bookName).html to storage successfully")
+
                     } else {
                         DDLogError("nothing returned from the web server")
                     }
@@ -83,20 +85,21 @@ class VCWebNovelDownloadManager: NSObject, WKNavigationDelegate, WKScriptMessage
             }
         } else if status == .selectBook {
             
-            webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (result : Any?, error : Error?) in
-                if error != nil {
-                    DDLogError("error message: \(error.debugDescription)")
-                } else {
-                    if result != nil {
-                        self.htmlContent = (result as! String)
-                        // write to file
-                        VCHelper.writeTo(file: self.bookName + ".txt", text: self.htmlContent)
-                    } else {
-                        DDLogError("nothing returned from the web server")
-                    }
-                    
-                }
-            }
+//            webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (result : Any?, error : Error?) in
+//                if error != nil {
+//                    DDLogError("error message: \(error.debugDescription)")
+//                } else {
+//                    if result != nil {
+//                        self.htmlContent = (result as! String)
+//                        // write current html to file
+//                        VCHelper.writeTo(file: self.bookName + ".html", text: self.htmlContent)
+//                        DDLogVerbose("write file \(self.bookName).html to storage successfully")
+//                    } else {
+//                        DDLogError("nothing returned from the web server")
+//                    }
+//                    
+//                }
+//            }
         }
         
     }
